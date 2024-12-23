@@ -1,0 +1,122 @@
+.sidebar {
+  background-color: #161616;
+  max-width: 28%;
+  min-width: 325px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.inputContainer {
+  width: 100%;
+  margin: auto;
+  max-width: 650px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.input {
+  padding: 15px;
+  width: 90%;
+  min-width: 200px;
+  height: 65px;
+  font-size: 1.75rem;
+  color: #bababa;
+  border-radius: 6px;
+  background-color: #292929;
+}
+
+.stops {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.addStop {
+  width: 90%;
+  max-width: 650px;
+  height: 65px;
+  border-radius: 6px;
+  font-size: 2rem;
+  color: #5bbffe;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  background-color: #292929;
+  transition: 0.2s;
+}
+
+.addStop:hover {
+  background-color: #313131;
+}
+
+.stopBox {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 100px;
+  padding: 20px;
+  background-color: #292929;
+  margin-top: 10px;
+  border-radius: 6px;
+  justify-content: space-between;
+  max-width: 650px;
+  overflow: hidden;
+}
+
+.stopBox > section:last-child {
+  margin-right: -15px;
+  gap: 5px;
+  display: flex;
+}
+
+.stopBoxInfo {
+  flex-basis: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.stopBoxModify {
+  flex-basis: 20%;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    flex-direction: row;
+    align-items: start;
+    height: auto;
+    max-width: 100%;
+  }
+  .sidebar h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .inputContainer {
+    width: 90%;
+  }
+  .input {
+    width: 100%;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1150px) {
+  .stopBox {
+    height: 85px;
+  }
+  .stopBoxInfo h2 {
+    font-size: 1.6rem;
+  }
+  .stopBoxInfo p {
+    margin-left: 23px;
+    font-size: 1.2rem;
+  }
+}
