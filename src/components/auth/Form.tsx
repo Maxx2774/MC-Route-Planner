@@ -3,20 +3,29 @@ export default function Form() {
   const location = useLocation();
   const signIn = location.pathname === "/signin";
   return (
-    <section>
-      <form action="" className="flex flex-col gap-[10px]">
+    <section className="flex w-[100%] justify-center">
+      <form action="" className="flex items-center flex-col gap-[10px] w-[90%]">
         <input
           type="text"
           placeholder="Username"
           required
-          className="p-[10px] rounded-[6px]"
+          className="p-[10px] rounded-[6px] min-w-[200px] max-w-[300px] w-[100%]"
         />
         <input
           type="password"
           placeholder="Password"
           required
-          className="p-[10px] rounded-[6px]"
+          className="p-[10px] rounded-[6px] min-w-[200px] max-w-[300px] w-[100%]"
         />
+
+        {!signIn && (
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            required
+            className="p-[10px] rounded-[6px] min-w-[200px] max-w-[300px] w-[100%]"
+          />
+        )}
         <input type="submit" value={signIn ? "Sign in" : "Register"} />
       </form>
     </section>

@@ -23,33 +23,21 @@ export default function Nav() {
       <Link to="/" className={`${styles.navitems} ${isActive("/")}`}>
         <FaHome size={40} />
       </Link>
-      <section className="flex relative">
+      <section className="flex">
         <Link
           to="/routeplanner"
-          className={`${styles.navitems} ${isActive("/routeplanner")}`}
+          className={`${styles.navitems} ${isActive("/routeplanner")} `}
         >
-          ROUTE PLANNER
+          ROUTE PLANNER <FaRoute size={25} className={styles.navFaRoute} />
         </Link>
-        <FaRoute
-          size={27}
-          className={` ${styles.navitems}  ${isActive("/routeplanner")} ${
-            styles.navFaRoute
-          } absolute left-[245px] top-[2px] `}
-        />
       </section>
-      <section className="flex relative">
+      <section className="flex">
         <Link
           to="/savedroutes"
           className={`${styles.navitems} ${isActive("/savedroutes")} `}
         >
-          SAVED ROUTES
+          SAVED ROUTES <FaBookmark size={20} className={styles.navFaBookmark} />
         </Link>
-        <FaBookmark
-          size={20}
-          className={`${styles.navitems} ${isActive("/savedroutes")} ${
-            styles.navFaBookmark
-          } absolute left-[217px] top-[10px]`}
-        />
       </section>
 
       {signedIn ? (
