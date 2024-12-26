@@ -5,7 +5,7 @@ import { IoReorderThree } from "react-icons/io5";
 import { v4 as uuidv4 } from "uuid";
 
 export default function Stops() {
-  const { stops, addStop, removeStop, formatTime } = useStopsContext();
+  const { stops, formatTime } = useStopsContext();
   return (
     <section className={styles.stops}>
       <h2 className="text-[2.25rem]">STOPS </h2>
