@@ -1,0 +1,14 @@
+.profile {
+  justify-content: center;
+  font-size: 2rem;
+  margin-top: 50px;
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+}
+
+.profile button {
+  background-color: rgb(20, 20, 20);
+  border-radius: 6px;
+  padding: 10px 20px 10px 20px;
+}

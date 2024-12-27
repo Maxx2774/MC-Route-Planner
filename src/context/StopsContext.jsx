@@ -1,27 +1,9 @@
 import { useContext, createContext, useState, ReactNode } from "react";
 
-type StopsContextType = {
-  stops: Stop[];
-  addStop: (stop: Stop) => void;
-  removeStop: (index: number) => void;
-  formatTime: (minutes: number) => string;
-};
+const StopsContext = createContext();
 
-type Stop = {
-  order: number;
-  location: string;
-  distance: number;
-  estTime: number;
-};
-
-const StopsContext = createContext<StopsContextType | null>(null);
-
-type StopsProviderProps = {
-  children: ReactNode;
-};
-
-export function StopsProvider({ children }: StopsProviderProps) {
-  const [stops, setStops] = useState<Stop[]>([
+export function StopsProvider({ children }) {
+  const [stops, setStops] = useState([
     {
       order: 2,
       location: "Köpenhamn",
@@ -48,15 +30,15 @@ export function StopsProvider({ children }: StopsProviderProps) {
     },
   ]);
 
-  const addStop = (stop: Stop) => {
+  const addStop = (stop) => {
     setStops((prev) => [...prev, stop]);
   };
 
-  const removeStop = (index: number) => {
+  const removeStop = (index) => {
     setStops((prev) => prev.filter((_, i) => i !== index));
   };
 
-  const formatTime = (minutes: number): string => {
+  const formatTime = (minutes) => {
     const hours = Math.floor(minutes / 60);
     const remainingMinutes = minutes % 60;
 

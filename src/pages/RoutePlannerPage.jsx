@@ -8,7 +8,7 @@ export default function RoutePlannerPage() {
       <main>
         <SideBarRoutePlanner />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
